@@ -62,11 +62,11 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'host' => env('DB_HOST', '217.77.11.96'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'invic_bbs'),
+            'username' => env('DB_USERNAME', 'scard'),
+            'password' => env('DB_PASSWORD', '##Invic@@2023'),
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
