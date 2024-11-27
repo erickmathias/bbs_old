@@ -85,7 +85,8 @@ class ProjectController extends AppBaseController
      */
     public function show($id)
     {
-        $project = $this->projectRepository->find(decrypt($id));
+        $project = $this->projectRepository->find($id);
+//        $project = $this->projectRepository->find(decrypt($id));
 
         //dd($project); exit;
 
@@ -122,13 +123,15 @@ class ProjectController extends AppBaseController
         //return view('elements.create')->with(['stdcode'=>$stdcodedata,'steeltype'=>$steeltypedata,'pid'=>$request->pid]);
 
 
-        return view('projects.show')->with(['project' => $project, 'element' => $element, 'stdcode' => $stdcodedata, 'steeltype' => $steeltypedata, 'pid' => decrypt($id)]);
+        return view('projects.show')->with(['project' => $project, 'element' => $element, 'stdcode' => $stdcodedata, 'steeltype' => $steeltypedata, 'pid' => $id]);
+//        return view('projects.show')->with(['project' => $project, 'element' => $element, 'stdcode' => $stdcodedata, 'steeltype' => $steeltypedata, 'pid' => decrypt($id)]);
     }
 
     public function printPDF($id)
     {
         //dd($id);
-        $project = $this->projectRepository->find(decrypt($id));
+        $project = $this->projectRepository->find($id);
+//        $project = $this->projectRepository->find(decrypt($id));
 
         $data = [
             'project'=>$project,
@@ -143,7 +146,8 @@ class ProjectController extends AppBaseController
     public function printPDF2($id)
     {
         //dd($id);
-        $project = $this->projectRepository->find(decrypt($id));
+        $project = $this->projectRepository->find($id);
+//        $project = $this->projectRepository->find(decrypt($id));
 
         $data = [
             'project'=>$project,
